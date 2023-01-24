@@ -30,7 +30,7 @@ public class AnagramCreater {
             boolean isLetterStart = Character.isLetter(sourceSingleWord[indexStart]);
             boolean isLetterEnd = Character.isLetter(sourceSingleWord[indexEnd]);
 
-            if (isLetterStart == true && isLetterEnd == true) {
+            if (isLetterStart && isLetterEnd) {
                 sourceSingleWord[indexStart] = sourceSingleWord[indexEnd];
                 sourceSingleWord[indexEnd] = currentCharacter;
                 indexStart++;
@@ -38,7 +38,7 @@ public class AnagramCreater {
             } else if (isLetterEnd == isLetterStart) {
                 indexStart++;
                 indexEnd--;
-            } else if (isLetterEnd == false) {
+            } else if (!isLetterEnd) {
                 indexEnd--;
             } else {
                 indexStart++;
